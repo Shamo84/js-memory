@@ -25,22 +25,76 @@ body {
   background-position: center;
   perspective: 1000px;
   transition: transform 2s;
+  /* position: absolute; */
 }
 .rotate {
   transform: rotateY(180deg);
 }
 
 #carta1 {
-  position: absolute;
   top: 0;
   left: 0;
 }
 #carta2 {
-  position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 0%;
+  left: 25%;
 }
-
+#carta3 {
+  top: 0;
+  left: 50%;
+}
+#carta4 {
+  top: 0%;
+  left: 75%;
+}
+#carta5 {
+  top: 25%;
+  left: 0;
+}
+#carta6 {
+  top: 25%;
+  left: 25%;
+}
+#carta7 {
+  top: 25%;
+  left: 50%;
+}
+#carta8 {
+  top: 25%;
+  left: 75%;
+}
+#carta9 {
+  top: 50%;
+  left: 0;
+}
+#carta10 {
+  top: 50%;
+  left: 25%;
+}
+#carta11 {
+  top: 50%;
+  left: 50%;
+}
+#carta12 {
+  top: 50%;
+  left: 75%;
+}
+#carta13 {
+  top: 75%;
+  left: 0;
+}
+#carta14 {
+  top: 75%;
+  left: 25%;
+}
+#carta15 {
+  top: 75%;
+  left: 50%;
+}
+#carta16 {
+  top: 75%;
+  left: 75%;
+}
 
 
 .carta.python {
@@ -71,28 +125,60 @@ body {
 #container {
   position: relative;
   width: 592px;
+  height: 776px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
+
 }
 
 .container-animation {
   animation-name: shuffle;
-  animation-duration: 2.5s;
+  animation-duration: 6s;
   animation-timing-function: linear;
+  /* animation-fill-mode: forwards; */
 }
 
 @keyframes shuffle {
   0% {
+    position: absolute;
   }
-  50% {
+  30% {
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-
   100% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.container-animation-back {
+  animation-name: shuffle-back;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+@keyframes shuffle-back{
+  0% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  30% {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    transform: none;
+  }
+  100% {
+    position: absolute;
   }
 }
 
@@ -110,7 +196,9 @@ body {
     transform: rotate(0deg) scale(1) skew(0deg);
   }
 } */
-
+.position-inerhit {
+  position: static;
+}
 
 .unclickable {
   z-index: -1;
@@ -136,9 +224,6 @@ body {
 }
 .order4 {
   order: 4;
-}
-.order5 {
-  order: 5;
 }
 .order5 {
   order: 5;
