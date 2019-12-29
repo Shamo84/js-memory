@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-width: 296px;
+}
+
+#gioca {
+  font-size: 40px;
+}
+
+.carta {
+  border: 1px solid #1E7CCE;
+  border-radius: 5px;
+  width: 128px;
+  height: 174px;
+  margin: 10px;
+  cursor: pointer;
+  background-image: url(../img/backface.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  perspective: 1000px;
+  transition: transform 2s;
+}
+.rotate {
+  transform: rotateY(180deg);
+}
+
+#carta1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#carta2 {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
+
+
+
+.carta.python {
+  background-image: url(../img/Python.png);
+}
+.carta.java {
+  background-image: url(../img/java.png);
+}
+.carta.php {
+  background-image: url(../img/php.png);
+}
+.carta.laravel {
+  background-image: url(../img/laravel.png);
+}
+.carta.html5 {
+  background-image: url(../img/html5.png);
+}
+.carta.css3 {
+  background-image: url(../img/css3.png);
+}
+.carta.csharp {
+  background-image: url(../img/csharp.jpg);
+}
+.carta.bootstrap {
+  background-image: url(../img/bootstrap.png);
+}
+
+#container {
+  position: relative;
+  width: 592px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-animation {
+  animation-name: shuffle;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes shuffle {
+  0% {
+  }
+  50% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+  }
+}
+
+/* @keyframes shuffle {
+  0% {
+    transform: rotate(0deg) scale(1) skew(0deg);
+  }
+  45% {
+    transform: rotate(670deg) scale(0.05) skew(10deg);
+  }
+  55% {
+    transform: rotate(720deg) scale(0.05) skew(10deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(0deg);
+  }
+} */
+
+
+.unclickable {
+  z-index: -1;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.direction1 {
+  flex-direction: row-reverse;
+}
+
+.order1 {
+  order: 1;
+}
+.order2 {
+  order: 2;
+}
+.order3 {
+  order: 3;
+}
+.order4 {
+  order: 4;
+}
+.order5 {
+  order: 5;
+}
+.order5 {
+  order: 5;
+}
+.order6 {
+  order: 6;
+}
+.order7 {
+  order: 7;
+}
+.order8 {
+  order: 8;
+}
+.order9 {
+  order: 9;
+}
+.order10 {
+  order: 10;
+}
+.order11 {
+  order: 11;
+}
+.order12 {
+  order: 12;
+}
+.order13 {
+  order: 13;
+}
+.order14 {
+  order: 14;
+}
+.order15 {
+  order: 15;
+}
+.order16 {
+  order: 16;
+}
+
+
+@media screen and (min-width:297px) and (max-width:592px) {
+  #container {
+    width: 296px;
+  }
+}
