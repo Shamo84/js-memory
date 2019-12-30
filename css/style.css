@@ -5,6 +5,9 @@
 }
 
 body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   min-width: 296px;
 }
 
@@ -122,8 +125,11 @@ body {
   background-image: url(../img/bootstrap.png);
 }
 
-#container {
-  position: relative;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 592px;
   height: 776px;
   margin: 0 auto;
@@ -131,14 +137,39 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
+  z-index: -1;
 }
 
+.zindexauto {
+  z-index: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.overlay #messaggio {
+  font-size: 8vw;
+  text-align: center;
+}
 .container-animation {
   animation-name: shuffle;
   animation-duration: 8s;
   animation-timing-function: linear;
   /* animation-fill-mode: forwards; */
 }
+
+
 
 @keyframes shuffle {
   0% {
@@ -184,20 +215,7 @@ body {
   }
 }
 
-/* @keyframes shuffle {
-  0% {
-    transform: rotate(0deg) scale(1) skew(0deg);
-  }
-  45% {
-    transform: rotate(670deg) scale(0.05) skew(10deg);
-  }
-  55% {
-    transform: rotate(720deg) scale(0.05) skew(10deg);
-  }
-  100% {
-    transform: rotate(0deg) scale(1) skew(0deg);
-  }
-} */
+
 .position-inerhit {
   position: static;
 }
@@ -209,6 +227,9 @@ body {
 .hidden {
   opacity: 0;
   transition: 1s;
+}
+.display-none {
+  display: none;
 }
 
 .direction1 {

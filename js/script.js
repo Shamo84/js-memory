@@ -104,7 +104,8 @@ function() {
       document.getElementById('carta' + i).classList.add('order' + Math.floor(Math.random() * 16 + 1));
     }
     document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 2));
-  }, 7000 );
+    document.getElementById('container').classList.add('zindexauto');
+  }, 7800 );
 
   }
 );
@@ -117,6 +118,8 @@ function() {
   if (PrimaScelta == '') {
     PrimaScelta = 'carta1';
   } else {
+    document.getElementById('container').classList.remove('zindexauto');
+    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta2') {
       alert('Bravo, hai trovato una coppia!');
       CoppieTrovate += 1;
@@ -126,18 +129,22 @@ function() {
       if (CoppieTrovate == 2) {
         setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
       }
-}, 2100);
+    }, 2100);
     } else {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
       document.getElementById('carta1').classList.remove('unclickable', 'rotate');
     }, 2100);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).className = 'carta';
-        document.getElementById('carta1').className = 'carta';
+        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
+        document.getElementById('carta1').classList.remove('python');
     }, 2700);
     }
-    setTimeout(function(){PrimaScelta = '';}, 2700);}
+    setTimeout(function(){PrimaScelta = '';}, 2700);
+    setTimeout(function(){
+      document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+      document.getElementById('overlay').classList.remove('display-none');
+    }, 2700);}
 });
 
 document.getElementById('carta2').addEventListener('click',
@@ -148,6 +155,8 @@ function() {
   if (PrimaScelta == '') {
     PrimaScelta = 'carta2';
   } else {
+    document.getElementById('container').classList.remove('zindexauto');
+    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta1') {
       setTimeout(function(){
       alert('Bravo, hai trovato una coppia!');
@@ -164,7 +173,7 @@ function() {
       document.getElementById('carta2').classList.remove('unclickable', 'rotate');
     }, 2100);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
         document.getElementById('carta2').className = 'carta';
     }, 2700);
     }
@@ -179,6 +188,8 @@ function() {
   if (PrimaScelta == '') {
     PrimaScelta = 'carta3';
   } else {
+    document.getElementById('container').classList.remove('zindexauto');
+    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta4') {
       setTimeout(function(){
       alert('Bravo, hai trovato una coppia!');
@@ -195,7 +206,7 @@ function() {
       document.getElementById('carta3').classList.remove('unclickable', 'rotate');
     }, 2100);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
         document.getElementById('carta3').className = 'carta';
     }, 2700);
     }
@@ -209,6 +220,8 @@ function() {
   if (PrimaScelta == '') {
     PrimaScelta = 'carta4';
   } else {
+    document.getElementById('container').classList.remove('zindexauto');
+    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta3') {
       setTimeout(function(){
       alert('Bravo, hai trovato una coppia!');
@@ -225,7 +238,7 @@ function() {
       document.getElementById('carta4').classList.remove('unclickable', 'rotate');
     }, 2100);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
         document.getElementById('carta4').className = 'carta';
     }, 2700);
     }
