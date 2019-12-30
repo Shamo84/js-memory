@@ -9,6 +9,10 @@ body {
   height: 100vh;
   width: 100vw;
   min-width: 296px;
+  background-image: url(../img/table.png);
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
 }
 
 #gioca,
@@ -34,6 +38,7 @@ body {
   background-size: contain;
   background-position: center;
   transition: transform 2s;
+  /* border-radius: 7px; */
 }
 .rotate {
   transform: rotateY(180deg);
@@ -107,12 +112,14 @@ body {
 
 .carta.python {
   background-image: url(../img/Python.png);
+  background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
 }
 .carta.java {
   background-image: url(../img/java.png);
+  background-color: white;
   background-size: 65%;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
@@ -120,6 +127,7 @@ body {
 }
 .carta.php {
   background-image: url(../img/php.png);
+  background-color: white;
   background-size: 90%;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
@@ -127,18 +135,21 @@ body {
 }
 .carta.laravel {
   background-image: url(../img/laravel.png);
+  background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
 }
 .carta.html5 {
   background-image: url(../img/html5.png);
+  background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
 }
 .carta.css3 {
   background-image: url(../img/css3.png);
+  background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
   background-size: 74%;
@@ -146,12 +157,14 @@ body {
 }
 .carta.csharp {
   background-image: url(../img/csharp.jpg);
+  background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
 }
 .carta.bootstrap {
   background-image: url(../img/bootstrap.png);
+  background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
@@ -169,7 +182,6 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  background-color: lightgreen;
 }
 
 .overlay {
