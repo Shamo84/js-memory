@@ -103,7 +103,7 @@ function() {
     for (var i = 1; i <= 16; i++) {
       document.getElementById('carta' + i).classList.add('order' + Math.floor(Math.random() * 16 + 1));
     }
-    document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 2));
+    document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 4));
     document.getElementById('container').classList.add('zindexauto');
   }, 7800 );
 
