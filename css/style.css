@@ -11,8 +11,17 @@ body {
   min-width: 296px;
 }
 
-#gioca {
-  font-size: 40px;
+#gioca,
+#ok {
+  font-size: 7vw;
+  cursor: pointer;
+  width: 30vw;
+  background-color: rgba(100, 200, 100, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px black;
+  margin-top: 5vh;
 }
 
 .carta {
@@ -179,6 +188,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 1s;
+
 }
 .overlay #messaggio {
   font-size: 8vw;
