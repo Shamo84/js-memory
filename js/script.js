@@ -4,29 +4,35 @@ var CoppieTrovate = 0;
 
 document.getElementById('carta1').addEventListener('click',
 function() {
-  document.getElementById('carta1').classList.add('unclickable');
+  document.getElementById('carta1').classList.add('unclickable', 'rotate');
   setTimeout(function(){document.getElementById('carta1').classList.add('python')}, 600);
-  document.getElementById('carta1').classList.add('rotate');
   if (PrimaScelta == '') {
     PrimaScelta = 'carta1';
   }
-  else
+  else {
     SecondaScelta = 'carta1';
-    document.getElementById('container').classList.remove('zindexauto');
-    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
-    if (PrimaScelta == SecondaScelta) {
+        setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
+    if (PrimaScelta == 'carta2') {
       CoppieTrovate += 1;
       setTimeout(function(){
-        document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
-        document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-      }, 1500);
-      setTimeout(function(){document.getElementById('overlay').classList.add('display-none');}, 3000);
-      setTimeout(function(){
-      document.getElementById(PrimaScelta).classList.add('hidden');
-      document.getElementById('carta1').classList.add('hidden');
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta1').classList.add('transparent');
         if (CoppieTrovate == 2) {
-          setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+            document.getElementById('gioca').classList.add('display-none');
+            document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+            document.getElementById('gioca').classList.add('display-none');
+          }, 1000);
+          setTimeout(function(){document.getElementById('overlay').classList.add('display-none');}, 2500);
         }
       }, 2100);
     }
@@ -38,104 +44,121 @@ function() {
         document.getElementById('ok').classList.remove('display-none');
       }, 2700);
     }
+  }
 });
 
 document.getElementById('carta2').addEventListener('click',
 function() {
-  document.getElementById('carta2').classList.add('unclickable');
+  document.getElementById('carta2').classList.add('unclickable', 'rotate');
   setTimeout(function(){document.getElementById('carta2').classList.add('python')}, 600);
-  document.getElementById('carta2').classList.add('rotate');
   if (PrimaScelta == '') {
     PrimaScelta = 'carta2';
-  } else {
-    document.getElementById('container').classList.remove('zindexauto');
-    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
+  }
+  else {
+    SecondaScelta = 'carta2';
+        setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta1') {
-      setTimeout(function(){
-      alert('Bravo, hai trovato una coppia!');
       CoppieTrovate += 1;
-      document.getElementById(PrimaScelta).classList.add('hidden');
-      document.getElementById('carta2').classList.add('hidden');
-      if (CoppieTrovate == 2) {
-        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
-      }
-}, 2100);
-    } else {
       setTimeout(function(){
-      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
-      document.getElementById('carta2').classList.remove('unclickable', 'rotate');
-    }, 2100);
+        document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+        document.getElementById('overlay').classList.remove('display-none');
+        document.getElementById('gioca').classList.add('display-none');
+      }, 1500);
+      setTimeout(function(){document.getElementById('overlay').classList.add('display-none');}, 3000);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
-        document.getElementById('carta2').className = 'carta';
-    }, 2700);
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta2').classList.add('transparent');
+        if (CoppieTrovate == 2) {
+          setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+        }
+      }, 2100);
+      setTimeout(function(){PrimaScelta = '';}, 2700);
     }
-    setTimeout(function(){PrimaScelta = '';}, 2700);}
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+        document.getElementById('gioca').classList.add('display-none');
+        document.getElementById('ok').classList.remove('display-none');
+      }, 2700);
+    }
+  }
 });
-
 document.getElementById('carta3').addEventListener('click',
 function() {
-  document.getElementById('carta3').classList.add('unclickable');
+  document.getElementById('carta3').classList.add('unclickable', 'rotate');
   setTimeout(function(){document.getElementById('carta3').classList.add('java')}, 600);
-  document.getElementById('carta3').classList.add('rotate');
   if (PrimaScelta == '') {
     PrimaScelta = 'carta3';
-  } else {
-    document.getElementById('container').classList.remove('zindexauto');
-    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
+  }
+  else {
+    SecondaScelta = 'carta3';
+        setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta4') {
-      setTimeout(function(){
-      alert('Bravo, hai trovato una coppia!');
       CoppieTrovate += 1;
-      document.getElementById(PrimaScelta).classList.add('hidden');
-      document.getElementById('carta3').classList.add('hidden');
-      if (CoppieTrovate == 2) {
-        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
-      }
-    }, 2100);
-    } else {
       setTimeout(function(){
-      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
-      document.getElementById('carta3').classList.remove('unclickable', 'rotate');
-    }, 2100);
+        document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+        document.getElementById('overlay').classList.remove('display-none');
+        document.getElementById('gioca').classList.add('display-none');
+      }, 1500);
+      setTimeout(function(){document.getElementById('overlay').classList.add('display-none');}, 3000);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
-        document.getElementById('carta3').className = 'carta';
-    }, 2700);
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta3').classList.add('transparent');
+        if (CoppieTrovate == 2) {
+          setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+        }
+      }, 2100);
+      setTimeout(function(){PrimaScelta = '';}, 2700);
+
     }
-    setTimeout(function(){PrimaScelta = '';}, 2700);}
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+        document.getElementById('gioca').classList.add('display-none');
+        document.getElementById('ok').classList.remove('display-none');
+      }, 2700);
+    }
+  }
 });
 document.getElementById('carta4').addEventListener('click',
 function() {
-  document.getElementById('carta4').classList.add('unclickable');
+  document.getElementById('carta4').classList.add('unclickable', 'rotate');
   setTimeout(function(){document.getElementById('carta4').classList.add('java')}, 600);
-  document.getElementById('carta4').classList.add('rotate');
   if (PrimaScelta == '') {
     PrimaScelta = 'carta4';
-  } else {
-    document.getElementById('container').classList.remove('zindexauto');
-    setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
+  }
+  else {
+    SecondaScelta = 'carta4';
+        setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
     if (PrimaScelta == 'carta3') {
-      setTimeout(function(){
-      alert('Bravo, hai trovato una coppia!');
       CoppieTrovate += 1;
-      document.getElementById(PrimaScelta).classList.add('hidden');
-      document.getElementById('carta4').classList.add('hidden');
-      if (CoppieTrovate == 2) {
-        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
-      }
-    }, 2100);
-    } else {
       setTimeout(function(){
-      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
-      document.getElementById('carta4').classList.remove('unclickable', 'rotate');
-    }, 2100);
+        document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+        document.getElementById('overlay').classList.remove('display-none');
+        document.getElementById('gioca').classList.add('display-none');
+      }, 1500);
+      setTimeout(function(){document.getElementById('overlay').classList.add('display-none');}, 3000);
       setTimeout(function(){
-        document.getElementById(PrimaScelta).classList.remove('python', 'java', 'bootstrap', 'csharp', 'css3', 'html5', 'laravel', 'php');
-        document.getElementById('carta4').className = 'carta';
-    }, 2700);
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta4').classList.add('transparent');
+        if (CoppieTrovate == 2) {
+          setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+        }
+      }, 2100);
+      setTimeout(function(){PrimaScelta = '';}, 2700);
+
     }
-    setTimeout(function(){PrimaScelta = '';}, 2700);}
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+        document.getElementById('gioca').classList.add('display-none');
+        document.getElementById('ok').classList.remove('display-none');
+      }, 2700);
+    }
+  }
 });
 document.getElementById('carta5').addEventListener('click',
 function() {
@@ -409,16 +432,59 @@ function() {
   setTimeout(function(){
     for (var i = 1; i <= 16; i++) {
       document.getElementById('carta' + i).classList.add('order' + Math.floor(Math.random() * 16 + 1));
+      document.getElementById('carta' + i).classList.add('unclickable', 'rotate');
     }
     document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 4));
-    document.getElementById('container').classList.add('zindexauto');
   }, 7800 );
-
-  }
-);
+  setTimeout(function(){
+    document.getElementById('carta1').classList.add('python');
+    document.getElementById('carta2').classList.add('python');
+    document.getElementById('carta3').classList.add('java');
+    document.getElementById('carta4').classList.add('java');
+    document.getElementById('carta5').classList.add('php');
+    document.getElementById('carta6').classList.add('php');
+    document.getElementById('carta7').classList.add('laravel');
+    document.getElementById('carta8').classList.add('laravel');
+    document.getElementById('carta9').classList.add('html5');
+    document.getElementById('carta10').classList.add('html5');
+    document.getElementById('carta11').classList.add('css3');
+    document.getElementById('carta12').classList.add('css3');
+    document.getElementById('carta13').classList.add('csharp');
+    document.getElementById('carta14').classList.add('csharp');
+    document.getElementById('carta15').classList.add('bootstrap');
+    document.getElementById('carta16').classList.add('bootstrap');
+  }, 8400 );
+  setTimeout(function(){
+    for (var i = 1; i <= 16; i++) {
+      document.getElementById('carta' + i).classList.remove('unclickable', 'rotate');
+    }
+  }, 11400 );
+  setTimeout(function(){
+    document.getElementById('carta1').classList.remove('python');
+    document.getElementById('carta2').classList.remove('python');
+    document.getElementById('carta3').classList.remove('java');
+    document.getElementById('carta4').classList.remove('java');
+    document.getElementById('carta5').classList.remove('php');
+    document.getElementById('carta6').classList.remove('php');
+    document.getElementById('carta7').classList.remove('laravel');
+    document.getElementById('carta8').classList.remove('laravel');
+    document.getElementById('carta9').classList.remove('html5');
+    document.getElementById('carta10').classList.remove('html5');
+    document.getElementById('carta11').classList.remove('css3');
+    document.getElementById('carta12').classList.remove('css3');
+    document.getElementById('carta13').classList.remove('csharp');
+    document.getElementById('carta14').classList.remove('csharp');
+    document.getElementById('carta15').classList.remove('bootstrap');
+    document.getElementById('carta16').classList.remove('bootstrap');
+    document.getElementById('container').classList.add('zindexauto');
+  }, 12000 );
+});
 // OK
 document.getElementById('ok').addEventListener('click',
   function() {
+    for (var i = 1; i <= 16; i++) {
+      document.getElementById('carta' + i).classList.remove("transparent");
+    }
     document.getElementById('overlay').classList.add('display-none');
     document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
     document.getElementById(SecondaScelta).classList.remove('unclickable', 'rotate');

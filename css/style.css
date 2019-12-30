@@ -33,9 +33,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  perspective: 1000px;
   transition: transform 2s;
-  /* position: absolute; */
 }
 .rotate {
   transform: rotateY(180deg);
@@ -115,12 +113,14 @@ body {
 }
 .carta.java {
   background-image: url(../img/java.png);
+  background-size: 65%;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
 }
 .carta.php {
   background-image: url(../img/php.png);
+  background-size: 90%;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
 
@@ -141,6 +141,7 @@ body {
   background-image: url(../img/css3.png);
   border: 2px solid #1E7CCE;
   border-radius: 5px;
+  background-size: 74%;
 
 }
 .carta.csharp {
@@ -168,11 +169,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  z-index: -1;
-}
-
-.zindexauto {
-  z-index: auto;
+  background-color: lightgreen;
 }
 
 .overlay {
@@ -189,7 +186,14 @@ body {
   justify-content: center;
   align-items: center;
   transition: 1s;
-
+}
+.transparent-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .overlay #messaggio {
   font-size: 8vw;
@@ -201,8 +205,6 @@ body {
   animation-timing-function: linear;
   /* animation-fill-mode: forwards; */
 }
-
-
 
 @keyframes shuffle {
   0% {
@@ -254,10 +256,10 @@ body {
 }
 
 .unclickable {
-  z-index: -1;
+  z-index: -2;
 }
 
-.hidden {
+.transparent {
   opacity: 0;
   transition: 1s;
 }
