@@ -3,9 +3,6 @@ var CoppieTrovate = 0;
 
 document.getElementById('gioca').addEventListener('click',
 function() {
-  for (var i = 1; i <= 16; i++) {
-    document.getElementById('carta' + i).classList.add('order' + Math.floor(Math.random() * 16 + 1));
-  }
   setTimeout(function(){
     document.getElementById('carta16').classList.add('container-animation');
   }, 100 );
@@ -56,54 +53,59 @@ function() {
   }, 1600 );
   setTimeout(function(){
     document.getElementById('carta1').classList.add('container-animation-back');
-  }, 2500 );
-  setTimeout(function(){
-    document.getElementById('carta2').classList.add('container-animation-back');
-  }, 2600 );
-  setTimeout(function(){
-    document.getElementById('carta3').classList.add('container-animation-back');
-  }, 2700 );
-  setTimeout(function(){
-    document.getElementById('carta4').classList.add('container-animation-back');
-  }, 2800 );
-  setTimeout(function(){
-    document.getElementById('carta5').classList.add('container-animation-back');
-  }, 2900 );
-  setTimeout(function(){
-    document.getElementById('carta6').classList.add('container-animation-back');
   }, 3000 );
   setTimeout(function(){
-    document.getElementById('carta7').classList.add('container-animation-back');
+    document.getElementById('carta2').classList.add('container-animation-back');
   }, 3100 );
   setTimeout(function(){
-    document.getElementById('carta8').classList.add('container-animation-back');
+    document.getElementById('carta3').classList.add('container-animation-back');
   }, 3200 );
   setTimeout(function(){
-    document.getElementById('carta9').classList.add('container-animation-back');
+    document.getElementById('carta4').classList.add('container-animation-back');
   }, 3300 );
   setTimeout(function(){
-    document.getElementById('carta10').classList.add('container-animation-back');
+    document.getElementById('carta5').classList.add('container-animation-back');
   }, 3400 );
   setTimeout(function(){
-    document.getElementById('carta11').classList.add('container-animation-back');
+    document.getElementById('carta6').classList.add('container-animation-back');
   }, 3500 );
   setTimeout(function(){
-    document.getElementById('carta12').classList.add('container-animation-back');
+    document.getElementById('carta7').classList.add('container-animation-back');
   }, 3600 );
   setTimeout(function(){
-    document.getElementById('carta13').classList.add('container-animation-back');
+    document.getElementById('carta8').classList.add('container-animation-back');
   }, 3700 );
   setTimeout(function(){
-    document.getElementById('carta14').classList.add('container-animation-back');
+    document.getElementById('carta9').classList.add('container-animation-back');
   }, 3800 );
   setTimeout(function(){
-    document.getElementById('carta15').classList.add('container-animation-back');
+    document.getElementById('carta10').classList.add('container-animation-back');
   }, 3900 );
   setTimeout(function(){
-    document.getElementById('carta16').classList.add('container-animation-back');
+    document.getElementById('carta11').classList.add('container-animation-back');
   }, 4000 );
+  setTimeout(function(){
+    document.getElementById('carta12').classList.add('container-animation-back');
+  }, 4100 );
+  setTimeout(function(){
+    document.getElementById('carta13').classList.add('container-animation-back');
+  }, 4200 );
+  setTimeout(function(){
+    document.getElementById('carta14').classList.add('container-animation-back');
+  }, 4300 );
+  setTimeout(function(){
+    document.getElementById('carta15').classList.add('container-animation-back');
+  }, 4400 );
+  setTimeout(function(){
+    document.getElementById('carta16').classList.add('container-animation-back');
+  }, 4500 );
+  setTimeout(function(){
+    for (var i = 1; i <= 16; i++) {
+      document.getElementById('carta' + i).classList.add('order' + Math.floor(Math.random() * 16 + 1));
+    }
+    document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 2));
+  }, 7000 );
 
-  document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 2));
   }
 );
 

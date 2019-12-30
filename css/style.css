@@ -21,7 +21,7 @@ body {
   cursor: pointer;
   background-image: url(../img/backface.JPG);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   perspective: 1000px;
   transition: transform 2s;
@@ -131,12 +131,11 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-
 }
 
 .container-animation {
   animation-name: shuffle;
-  animation-duration: 6s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   /* animation-fill-mode: forwards; */
 }
@@ -145,7 +144,7 @@ body {
   0% {
     position: absolute;
   }
-  30% {
+  17% {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -176,6 +175,9 @@ body {
     left: 45%;
     top: 45%;
     transform: none;
+  }
+  80% {
+    position: absolute;
   }
   100% {
     position: absolute;
@@ -263,8 +265,16 @@ body {
 }
 
 
-@media screen and (min-width:297px) and (max-width:592px) {
+@media screen and (max-width:592px) {
   #container {
-    width: 296px;
+    width: 100vw;
+    min-width: 296px;
+    height: calc(100vw * 174 / 128);
+    min-height: calc(296px * 174 / 128);
+  }
+  .carta {
+    width: 22%;
+    height: 22%;
+    margin: 1.5%;
   }
 }
