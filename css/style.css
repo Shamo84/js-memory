@@ -15,6 +15,15 @@ body {
   background-size: cover;
 }
 
+#coppia {
+  color: rgb(70, 70, 70);
+  font-size: 4vw;
+  text-shadow: 2px 2px white;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  transition: 1s;
+}
+
 .overlay {
   position: absolute;
   top: 50%;
@@ -109,8 +118,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  transition: transform 2s;
+  transition: transform 2s, opacity 1s;
   border-radius: 6px;
+
 }
 .rotate {
   transform: rotateY(180deg);
