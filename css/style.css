@@ -380,3 +380,14 @@ body {
     margin: 1.5%;
   }
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px white;
+  line-height: 9vh;
+  font-size: 1.5vw;
+  font-style: italic;
+}
