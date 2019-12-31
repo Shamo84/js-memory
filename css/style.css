@@ -5,27 +5,60 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   height: 100vh;
   width: 100vw;
   min-width: 296px;
-  background-image: url(../img/table.png);
+  background-color: #FBF9C9;
+  background-image: url(https://www.elsetge.cat/myimg/f/34-345663_question-marks-wallpaper-cute-question-mark-background.png);
+
+  /* background-image: url(../img/desk.jpg);
   background-repeat: no-repeat;
-  background-size: 130%;
-  background-position: center;
+  background-size: cover;
+  background-position: center; */
 }
 
+
 #gioca,
-#ok {
-  font-size: 7vw;
+#ok,
+#scopri {
+  font-size: 5vw;
   cursor: pointer;
   width: 30vw;
-  background-color: rgba(100, 200, 100, 0.8);
+  background-color: rgba(91, 200, 207, 0.8);
   border-radius: 10px;
   text-align: center;
   color: white;
   text-shadow: 2px 2px black;
   margin-top: 5vh;
+}
+
+.difficolta {
+  margin-top: 5vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.livello-diff {
+  width: 9vw;
+  padding: 0.5vw 0;
+  font-size: 2vw;
+  cursor: pointer;
+  background-color: rgba(77, 101, 141, 0.8);
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px black;
+  opacity: 0.5;
+}
+
+.active {
+  background-color: rgba(251, 249, 201, 0.8);
+  font-size: 2.2vw;
+  border: 1px solid black;
+  opacity: 1;
 }
 
 .carta {
@@ -190,14 +223,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.7);
-  z-index: 2;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  z-index: 100;
+  width: 70%;
+  height: calc(91% + 40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 1s;
+  border-radius: 15px;
 }
 .transparent-overlay {
   position: absolute;
@@ -208,7 +243,9 @@ body {
   z-index: -1;
 }
 .overlay #messaggio {
-  font-size: 8vw;
+  color: #DF6EA6;
+  text-shadow: 8px 5px 6px #4d658d, 8px 3px 6px #4d658d;
+  font-size: 6vw;
   text-align: center;
 }
 .container-animation {
@@ -351,4 +388,8 @@ body {
     height: 22%;
     margin: 1.5%;
   }
+}
+
+.zindex99 {
+  z-index: 99;
 }
