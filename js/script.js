@@ -849,7 +849,7 @@ function() {
     }
     document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 4));
   }, 7800 );
-  setTimeout(function(){
+  setTimeout(function() {
     document.getElementById('carta1').classList.add('python');
     document.getElementById('carta2').classList.add('python');
     document.getElementById('carta3').classList.add('java');
